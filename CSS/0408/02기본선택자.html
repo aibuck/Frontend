@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우선순위</title>
+    <style>
+        #aa {
+            color: bisque;
+        }
+
+        .a {
+            color: blue;
+        }
+
+        * {
+            color: red;
+        }
+
+        h1,
+        p {
+            color: aqua;
+        }
+
+        /*
+    선택자 우선순위: 쓰여진 순서랑 관계없이 적용되는 순위
+    선택자가 세부적일수록 우선적으로 적용됨.(전체<그룹<클래스<아이디)
+    1. 아이디 선택자 
+    2. 클래스 선택자
+    3. 태그 선택자
+    */
+    </style>
+</head>
+
+<body>
+    <h1 class="a" id="aa">h1으로 쓴 문장/ 클래스보다 아이디가 더 우선순위</h1>
+    <p class="a" id="ab">p로 쓴 문장 / 태그보다 클래스가 우선순위</p>
+    <p>p로 쓴 문장 / 클래스와 아이디 모두 없을때에 그룹선택자</p>
+    <div>div로 쓴 문장 / *로 모두를 적용했을때에 전체선택자</div>
+</body>
+
+</html>

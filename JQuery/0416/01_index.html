@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 시작하기</title>
+</head>
+<body>
+  <h1 class="header">
+    내 페이지에 제이쿼리 적용하는 방법
+  </h1>
+  <p>
+    1.제이쿼리 코드 다운로드 받아서 연결하기 jquery 검색후 다운로드
+  </p>
+  <p>
+    2.제이쿼리 코드를 서버로부터 전달받기 jquery cdn 검색
+  </p>
+
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script> -->
+  
+  <script src="./jquery-3.7.1.js"></script>
+  <script>
+
+    /*
+      제이쿼리 기본 사용법은 이거 하나
+      => $(선택자).기능(인자)
+
+      제이쿼리로 선택할 수 있는 것?
+      => Element 객체 (DOM)
+      => window 객체
+      => 그외 케이스 잘 없음
+    */
+    // $('h1').css({
+    //   color: 'yellow',
+    //   backgroundcolor: 'blue'
+    // })
+    $(".header").text("와! 쉽다!")
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프론트엔드 역량강화</title>
+</head>
+<body>
+<!--
+forEach: 배열의 각 요소를 콜백함
+map: 배열을 추가하며 각 요소를 콜백함
+filter: 배열을 추가하며 각 요소의 true 값을 콜백함
+
+삼항연산자
+조건 ? 참 : 거짓 
+
+경로 확인후 > ntx create-react-app (폴더명)
+-->
+
+<script>
+  const cafe = {
+  starbucks: "스타벅스",
+  coffeebean: "커피빈",
+  pascucci: "파스쿠찌"
+  }
+  //객체만의 값 중 일부만 복사해서 쓰겠다!(구조 분해 할당)
+  let {coffeebean: cb, pascucci: pc} = cafe
+  console.log(cb)
+  console.log(pc)
+
+
+  //구조분해랑 반대되는 케이스 문법 : 향상된(인헨서드) 객체 리터럴
+  let dog = "강아지"
+  let cat = "고양이"
+  let ham = "햄스터"
+  let animal = {
+    dog,
+    cat,
+    ham
+  }
+  console.log(animal)
+</script>
+
+</body>
+</html>

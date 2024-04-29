@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 연습 시작하기</title>
+</head>
+<body>
+  <input type="text" id="text">
+  <button id="button">PUSH</button>
+
+  <p id="current"></p>
+
+  <script src="/jquery-3.7.1.js"></script>
+  <script>
+    $("#button").click(function(){
+      alert("버튼을 눌렀습니다")
+    })
+
+    //keydown, keyup, keypress
+    $("#text").keyup(function(){
+      $("#current").text($('#text').val())
+    })
+  </script>
+</body>
+</html>

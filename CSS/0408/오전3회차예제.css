@@ -1,0 +1,19 @@
+html{
+  background-color: antiquewhite;
+  text-align: center;
+}
+/* *은 모든 요소에 대해서, html은 문서에 대해서 */
+img#gal{
+  width: 200px; height: 200px;
+  border-radius: 200px;
+}
+hr#hra{
+  width: 50%;
+  height: 5px;
+  background-color: rgb(228, 155, 204);
+  border: 0;
+  border-radius: 10px;
+}
+/* 코드가 길어지면(스타일을 다양하게 하면)
+스타일시트(css)와 html 파일을 구분해주는게 좋음
+가독성,수정 난이도 등 */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 효과</title>
+  <style>
+    #box{
+      background-color: tomato;
+    }
+  </style>
+</head>
+<body>
+
+  <p>하하호호</p>
+  <button>효과</button>
+  <div id="box"></div>
+
+
+  <script src="/jquery-3.7.1.js"></script>
+  <script>
+    // $('p').hide()
+    // $('p').show()
+    $('button').click(function(){
+      // $('p').fadeOut(3000)
+      // $('p').fadeToggle(3000)
+      // $('p').slideUp(3000)
+      // $('p').slideToggle(3000)
+
+
+      $('#box').animate({
+        width: '200px', height: '200px'
+      }, 2000).animate({
+        width: '50px', height: '50px'
+      }, 2000)
+
+    }) // 메소드 체이닝 : 메소드 호출 뒤에 메소드 호출
+  </script>
+</body>
+</html>

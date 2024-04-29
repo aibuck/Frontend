@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 양식</title>
+</head>
+<body>
+    <h1>설문조사 양식</h1>
+    <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+    <fieldset>
+        <legend>개인정보</legend>
+        <label for="name">
+            이름
+            <input type="text" placeholder="본명을 입력하세요" id="name" >
+        </label><br>
+        <label for="email">
+            이메일
+            <input type="email" placeholder="메일 주소 쓰세요" id="email">
+        </label>
+    </fieldset>
+
+
+
+    <fieldset>
+        <legend>설문</legend>
+        <p>연령대가 어떻게 되십니까?</p>
+        <label>
+            <input type="radio" name="user"> 10대
+        </label>
+        <label>
+            <input type="radio" name="user"> 20대
+        </label>
+        <label>
+            <input type="radio" name="user"> 30대
+        </label>
+        <label>
+            <input type="radio" name="user"> 40대
+        </label>
+        <label>
+            <input type="radio" name="user"> 50대
+        </label>
+        <label>
+            <input type="radio" name="user"> 그외
+        </label><br>
+
+        <p>학원 선택 시 그 기준은 어떻게 되시나요?</p>
+        <label>
+            <input type="checkbox" name="loc"> 위치
+        </label>
+        <label>
+            <input type="checkbox" name="loc"> 학원비
+        </label>
+        <label>
+            <input type="checkbox" name="loc"> 강사
+        </label>
+        <label>
+            <input type="checkbox" name="loc"> 시설
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>기타의견</legend>
+        <textarea cols="30" rows="5"></textarea>
+    </fieldset>
+    <button>제출</button>
+    <hr>
+    <p>입력하느라 수고하셨습니다.</p>
+</body>
+</html>
+
+<!--입력 요소들을 테두리로 묶을때는 <fieldset태그를 사용
+<fieldset> 안에서 제목표시하는 태그는 <legend>-->

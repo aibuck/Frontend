@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <p>어느덧 3교시네요</p>
+  <p>조금만 더 힘내면 점심시간:p</p>
+
+  <script>
+
+    //Element 객체를 저장
+    let a = document.querySelector("p")
+
+    //Element 객체가 가진 텍스트를 콘솔에서 본다
+    console.log(a.textContent)
+
+    //Element 객체가 가진 텍스트를 수정한다
+    a.textContent = "곧 4교시네요 :)"
+    
+  </script>
+</body>
+</html>

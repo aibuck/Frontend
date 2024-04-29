@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+let monsterHP = 100
+const h1 = document.createElement("h1")
+const gamestart = confirm("몬스터가 나타났어요!")
+
+if(gamestart){    
+  let attackCount = 0
+  h1.textContent = "몬스터 잡기 게임을 시작합니다!"
+  document.body.appendChild(h1)
+
+  while(monsterHP > 0){
+    let attackDamage = parseInt(prompt(`${attackCount+1}번째 공격 데미지는 얼마인가요? (양의 정수로 입력하세요)`))
+    
+    if(attackDamage > 0){
+      attackCount += 1
+      monsterHP -= attackDamage
+
+      let p = document.createElement("p")
+      p.textContent = `몬스터를 ${attackCount}회 공격했습니다!`
+      document.body.appendChild(p)
+
+      p = document.createElement("p")
+      p.textContent = `몬스터의 남은 HP는 ${monsterHP < 0 ? 0 : monsterHP}입니다!`
+      document.body.appendChild(p)
+
+      if(monsterHP <= 0){
+
+        p = document.createElement("p")
+        p.textContent = "몬스터 잡기 완료! 수고하셨습니다."
+        document.body.appendChild(p)
+        
+        break; // 몬스터가 죽었으므로 루프 종료
+      }
+    } else {
+      alert("데미지를 잘못 입력하여 게임을 취소합니다!")
+      break; // 잘못된 데미지를 받았으므로 루프 종료
+    }
+  }
+} else {
+  h1.textContent = "몬스터에게서 도망쳤어요!"
+  document.body.appendChild(h1)
+}
+//ChatGPT의 도움을 일부 받았음 ^^;
+  </script>
+</body>
+</html>

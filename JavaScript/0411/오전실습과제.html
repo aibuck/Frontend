@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오전실습과제</title>
+  <style>
+    .name{
+      color: red;
+    }
+    .hobby{
+      color: blue;
+    }
+    .song{
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <!-- 이름, 취미, 곡 차례대로 입력 대화창 -->
+  <!-- 제목 태그 이름, 그 밑줄은 취미와 곡명이 출력 -->
+  
+  
+  <!-- <h1></h1>
+  <p></p>
+  <div></div>
+  <div>#S1</div> -->
+
+  
+  <h1 class="name"></h1>
+  <p class="hobby"></p>
+  <p class="song"></p>
+  <p>#S2</p>
+
+  <script>
+    // let name
+    // name = prompt("당신의 이름은?")
+    // let name2 = document.querySelector("h1")
+    // name2.textContent = name 
+
+    // let hobby
+    // hobby = prompt("당신의 취미는?")
+    // let hobby2 = document.querySelector("p")
+    // hobby2.textContent = `취미는 ${hobby} 입니다.`
+
+    // let song
+    // song = prompt("좋아하는 곡은?")
+    // let song2 = document.querySelector("div")
+    // song2.textContent = `즐겨듣는 곡은 ${song} 입니다.`//S1
+
+
+
+    let name3 = prompt("당신의 이름은?")
+    let hobby3 = prompt("당신의 취미는?")
+    let song3 = prompt("좋아하는 곡은?")
+    
+    
+    document.querySelector(".name").textContent = name3
+    document.querySelector(".hobby").textContent = `취미는 ${hobby3} 입니다.`
+    document.querySelector(".song").textContent = `즐겨듣는 곡은  ${song3} 입니다.`//S2
+
+  </script>
+</body>
+</html>

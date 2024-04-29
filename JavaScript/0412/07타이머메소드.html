@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이머 메소드</title>
+</head>
+<body>
+
+  <p id="now"></p>
+  <button id="stop">멈춰!</button>
+  <button id="start">시작하렴~</button>
+  <script> 
+
+    /*
+    setTimeout(function(){
+      alert("타임 아웃!")
+    }, 3000)
+    */
+
+    const p = document.getElementById("now")
+    const button = document.getElementById("stop")
+    const button2 = document.getElementById("start")
+
+    let timerId = setInterval(function(){
+      const now = new Date() // 코드 실행 시점의 시간 정보를 속성으로 가진다
+
+      let year, month, day, hour, min, sec;
+      year = now.getFullYear()
+      month = now.getMonth() + 1
+      day = now.getDate()
+      hour = now.getHours()
+      min = now.getMinutes()
+      sec = now.getSeconds()
+
+      p.textContent = `${year}/${month}/${day} ${hour}:${min}:${sec}`
+    }, 1000)
+
+    button.addEventListener("click", function(){
+      clearInterval(timerId)
+    })
+
+  //   button2.addEventListener("click", function(){//S1현재시간 다시 시작
+  //   timerId = setInterval(function(){
+  //     const now = new Date()
+
+  //     let year, month, day, hour, min, sec;
+  //     year = now.getFullYear()
+  //     month = now.getMonth() + 1;
+  //     day = now.getDate()
+  //     hour = now.getHours()
+  //     min = now.getMinutes()
+  //     sec = now.getSeconds()
+
+  //     p.textContent = `${year}/${month}/${day} ${hour}:${min}:${sec}`;
+  //   }, 1000)
+  // })
+
+
+
+let pausedTime; //S2멈춘시간기준으로 시작 멈춘 시간을 저장하기 위한 변수
+
+button.addEventListener("click", function(){
+  clearInterval(timerId);
+  pausedTime = new Date(); // 버튼 클릭 시간을 저장
+});
+
+button2.addEventListener("click", function(){
+  timerId = setInterval(function(){
+    const now = new Date(); 
+    let startTime;
+
+    // pausedTime이 정의되어 있다면, 멈춘 시간을 시작 시간으로 설정
+    if (pausedTime) {
+      startTime = pausedTime;
+      pausedTime = null; // 시작 시간을 저장했으므로 pausedTime 초기화
+    } else {
+      startTime = now; // pausedTime이 정의되어 있지 않으면 현재 시간을 시작 시간으로 설정
+    }
+
+    let year, month, day, hour, min, sec;
+    year = startTime.getFullYear();
+    month = startTime.getMonth() + 1;
+    day = startTime.getDate();
+    hour = startTime.getHours();
+    min = startTime.getMinutes();
+    sec = startTime.getSeconds();
+
+    p.textContent = `${year}/${month}/${day} ${hour}:${min}:${sec}`;
+  }, 1000);
+});
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위치지정하기</title>
+  <style>
+    p{
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+    }
+    #one{
+      background-color: aquamarine;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      /* ##static(기본값) relative absolute fixed  */
+      /* ##앱솔루트의 특징
+      앱솔루트가 지정된 요소의 부모중에서
+      position 속성을 가진 요소가 있다면
+      그것을 기준으로 이동한다. 만일
+      부모 중에 단 하나도 position 속성을 가진
+      요소가 없다면, 화면을 기준으로 이동한다.
+      fixed는 화면을 기준으로 고정함. 스크롤을 내려도 절대위치에 고정됨.*/
+    }
+  </style>
+</head>
+<body>
+  <p>1</p>
+  <p id="one">2</p>
+  <p>3</p>
+  <p>4</p>
+</body>
+</html>

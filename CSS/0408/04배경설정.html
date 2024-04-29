@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경설정</title>
+  <style>
+  div{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border: 20px double black;
+    box-sizing: border-box;
+    /* background-color: yellowgreen; */
+    /* background-clip: border-box;
+
+    background-image: url(./galaxy.jpg);
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+
+    background-origin: border-box;
+    background-position: bottom; */
+
+    background: bottom/200px 200px border-box url(./galaxy.jpg) no-repeat;
+    /* origin->clip 순으로 우선순위 */
+    /* 배경 단축속성 사용시에는 position/size만 순서대로 쓰고 나머지는 순서무관 */
+  }
+  
+  </style>
+</head>
+<body>
+  <div>
+    배경설정에 대해서
+  </div>
+</body>
+</html>

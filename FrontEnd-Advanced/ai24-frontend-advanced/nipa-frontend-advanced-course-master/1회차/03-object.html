@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 리터럴</title>
+</head>
+<body>
+
+  <script> 
+    // const cat = {
+    //   species: "포유류",
+    //   title: "고양이"
+    // }
+
+    // console.log(cat)
+    // console.log(cat.species)
+    // console.log(cat["title"])
+    // console.log(typeof cat)
+
+    // const gookhee = {
+    //   ...cat,
+    //   name: "국희",
+    //   age: 4, 
+    //   favorite: ["끈", "창틀" , "햇살"]
+    // }
+
+    // console.log(gookhee)
+    // console.log(gookhee.species)
+    // console.log(gookhee.favorite)
+    // console.log(typeof gookhee)
+
+    // const gookheeStr = JSON.stringify(gookhee)
+    // console.log(gookheeStr)
+    // console.log(typeof gookheeStr)
+    // console.log(JSON.parse(gookheeStr))
+
+    // const { favorite: things } = JSON.parse(gookheeStr)
+    // console.log(things)
+    
+    const cafe = {
+      starbucks: "스타벅스",
+      coffeebean: "커피빈",
+      pascucci: "파스쿠찌"
+    }
+
+
+    //객체만의 값 중 일부만 복사해서 쓰겠다!(구조 분해 할당)
+    let {coffeebean: cb, pascucci: pc} = cafe
+    console.log(cb)
+    console.log(pc)
+
+    //구조분해랑 반대되는 케이스 문법 : 향상된(인헨서드) 객체 리터럴
+    let dog = "강아지"
+    let cat = "고양이"
+    let ham = "햄스터"
+    let animal = {
+      dog,
+      cat,
+      ham
+    }
+    console.log(animal)
+  </script>
+</body>
+</html>

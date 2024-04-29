@@ -1,0 +1,17 @@
+{
+  "name": "npm-tutorial",
+  "version": "1.0.0",
+  "description": "my_first_node & npm_project",
+  "main": "main.js",
+  "scripts": {},
+  "keywords": [
+    "practice",
+    "hands-on"
+  ],
+  "author": "CMG",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.5.29",
+    "morgan": "^1.10.0"
+  }
+}

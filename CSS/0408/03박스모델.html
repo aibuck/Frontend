@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>박스모델</title>
+	<style>
+	
+		img{
+			width: 200px;
+			height: 200px;
+			border-width: 3px;
+			border-color: blue;
+			border-style: solid;
+			border: 5px blue solid;
+			/* ##단축속성(shothand) */
+			/* border-radius: 25px; */
+			border-top-left-radius: 50px;
+			/*##테두리 둥글게*/
+			padding: 5px;/*상하좌우 전부*/
+			margin: 10px 20px;/*상하, 좌우*/
+			box-sizing: border-box;
+			/* box-sizing: content-box; */
+			/* ##택1 보더박스는 요소크기 변환, 컨텐츠박스는 요소크기 고정 */
+			/* 보편적으로 보더박스를 많이 사용함(사이즈 조절 용이), 기본값은 컨텐츠박스 */
+	}
+    </style>
+</head>
+<body>
+	<img src="./galaxy.jpg">
+</body>
+</html>

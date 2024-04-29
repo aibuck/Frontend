@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04</title>
+</head>
+<body>
+  <script>
+  
+  const bag = ["우산","양치세트","태블릿","텀블러","핸드크림","충전기"]
+  
+  let result = bag.map(function(item){
+    return "가방에는 " + item
+  })
+  console.log(result)
+
+  result = bag.filter(function(item){
+    return item.length == 3 
+  })
+  console.log(result)
+  </script>
+</body>
+</html>

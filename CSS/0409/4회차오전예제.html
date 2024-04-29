@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <link rel="stylesheet" href="./4회차오전예제.css">
+  <title>채팅창</title>
+  <style>
+    #profile{
+      width: 50px;
+      height: 50px;
+      background-color: bisque;
+      border-radius: 10px;
+    }
+
+    #profile::after{
+      content: "친구";
+      position: relative;
+      left:45px
+    }
+
+    #profile::before{
+      content: "2";
+      position: relative;
+      top:30px;
+      left:55px;
+    }
+
+    #chat{
+      height: 700px;
+      background-color: bisque;
+    }
+
+    #texta{
+      resize: none;
+      position: fixed;
+      width: 90%;
+      height: 10%;
+      
+      
+      
+      
+    }
+    #in{
+      font-size: 20px;
+      background-color: antiquewhite;
+      border: none;
+      width: 7%;
+      height: 10%;
+      position: fixed;
+      left: 92%
+
+    }
+    #in:active{
+      background-color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <p id="profile"></p>
+  <p id="chat">안녕</p>
+  <textarea id="texta" cols="100px" rows="10px" placeholder="내용입력"></textarea>
+  <button id="in" >전송</button>
+</body>
+</html>

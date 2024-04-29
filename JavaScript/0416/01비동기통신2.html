@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // https://dog.ceo/api/breeds/image/random
+
+    const request = new XMLHttpRequest() //요청 객체 생성
+
+    //요청 관련 정보 결정하기
+    request.open('get',
+   "https://dog.ceo/api/breeds/image/random/10")
+    request.addEventListener('load', () => {
+      let result = JSON.parse(request.response).message
+      result.forEach(function(dog){
+        const img = document.createElement("img")
+        img.src = dog
+        img.style.width = '300px'
+        img.style.height = '300px'
+        document.body.appendChild(img)
+        
+      })
+    })
+  request.send()
+  </script>
+</body>
+</html>

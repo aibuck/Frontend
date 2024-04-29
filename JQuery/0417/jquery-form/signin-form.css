@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'NanumBarunpen';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 입력 항목의 내부 라벨에는 적용 X */
+* {
+  font-family: 'NanumBarunpen';
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eaeaea;
+}
+
+#container {
+  width: 640px;
+  margin: 0 auto; /* 좌우 여백을 동일하게 */
+  font-size: 24px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+form {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 15px;
+}
+
+#signup-table {
+  width: 640px;
+}
+
+/* 테이블의 행 안에서 하나의 열을 나타낸다 : 볼드체 */
+th {
+  width: 180px;
+  text-align: right;
+  padding: 5px;
+}
+
+/* 테이블의 행 안에서 하나의 열을 나타낸다 : 일반체 */
+td {
+  width: 340px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+input {
+  font-size: 24px;
+  max-width: 240px;
+  padding: 5px;
+}
+
+textarea {
+  resize: none;
+  width: 240px;
+  min-height: 100px;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+#buttons {
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+
+/* for jquery ui widget style */
+/*
+여러 구성요소를 지닌 태그 또는
+라이브러리에 의해 형성된 요소들은 
+일반적인 선택자로 스타일 적용에 제한이 있는 경우가 있다.
+
+따라서 형성된 클래스나 추가 요소등을 검사한 다음
+스타일을 지정하는 것이 보다 더 확실한 방법이다!
+
+그게 아니라면 라이브러리 매뉴얼을 보고 하는 방법도 good~
+*/
+
+/* 라디오 버튼에다 추가해 준 스타일 */
+.ui-checkboxradio-radio-label, .ui-button{
+  font-size: 25.4px;
+  font-family: 'NanumBarunpen';
+}
+
+/* 셀렉트 메뉴에다 추가해 준 스타일 */
+.ui-selectmenu-button{
+  width: 240px !important;
+  box-sizing: border-box;
+}

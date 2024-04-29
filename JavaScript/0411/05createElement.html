@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>createElement</title>
+</head>
+<body>
+  
+  <div id = "container"></div>
+  
+  <script>
+    for(let i = 0; i < 5; i++){
+      const box = document.createElement("div")
+      box.style.boxSizing = "border-box"
+      box.style.display = "inline-block"
+      box.style.width = "200px"
+      box.style.height = "200px"
+      box.style.backgroundColor = "tomato"
+      box.style.border = "3px solid teal"
+
+      console.log(box) //여기까지는 화면에 출력안됨
+
+      document.getElementById("container").appendChild(box)
+    }
+  </script>
+
+</body>
+</html>

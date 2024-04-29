@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클래스 조작해서 스타일 변화 주기</title>
+</head>
+<body>
+
+  <ul>
+    <li>고양이</li>
+    <li>강아지</li>
+    <li>햄스터</li>
+    <li>거북이</li>
+  </ul>
+
+
+
+  <script src="/jquery-3.7.1.js"></script>
+  <script>
+    //제이쿼리셀렉터는 해당하는 것 모두를 선택한다.
+    $("li").click(function(e){
+      $(e.target).toggleClass("orange")
+
+      for(let i = 0; i<4; i++){
+        if($($("li")[i]).hasClass("orange")){
+          $($("li")[i]).css({
+            color: "orange"
+          }) 
+        }
+        else{
+          $($("li")[i]).css({
+            color:"black"
+          })
+        } 
+      }//S1 조건문
+
+      // $('li').css({color:'black'})
+      // $(".orange").css({color: 'orange'})//S2, 이미 폰트가 black이라 불필요한 연산이 추가됨
+    })
+  </script>
+</body>
+</html>
